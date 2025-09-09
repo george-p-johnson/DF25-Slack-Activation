@@ -5,6 +5,9 @@ import Page2 from '../views/Page2.vue'
 import Mobile from '../views/Mobile.vue'
 import Desktop from '../views/Desktop.vue'
 
+import MobileVideo1 from '../views/MobileVideo1.vue'
+
+
 
 const routes = [
     { path: '/', name: 'Attract', component: Attract },
@@ -12,6 +15,8 @@ const routes = [
     { path: '/page2', name: 'Page2', component: Page2 },
     { path: '/mobile', name: 'Mobile', component: Mobile },
     { path: '/desktop', name: 'Desktop', component: Desktop },
+    { path: '/mobileVideo1', name: 'MobileVideo1', component: MobileVideo1 },
+
 ]
 
 const router = createRouter({

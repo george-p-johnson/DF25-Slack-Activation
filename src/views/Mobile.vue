@@ -12,7 +12,7 @@
 import { useRouter } from 'vue-router'
 const router = useRouter()
 function mobileVideo1() {
-  router.push('/') // loops back to attract
+  router.push('/mobileVideo1') 
 }
 
 function mobileVideo2() {

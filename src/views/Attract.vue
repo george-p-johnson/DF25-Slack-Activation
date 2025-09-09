@@ -6,12 +6,6 @@
 </template>
 
 <script setup>
-// import { useRouter } from 'vue-router'
-// const router = useRouter()
-// function goNext() {
-//   router.push('/page1')
-// }
-
 import { useRouter } from 'vue-router'
 import { logClick } from '@/utils/logger.js'
 
