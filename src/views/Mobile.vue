@@ -10,21 +10,28 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
+import { logClick } from '@/utils/logger.js'
+
 const router = useRouter()
+
 function mobileVideo1() {
-  router.push('/mobileVideo1') 
+    logClick('Mobile video 1', 'Mobile')
+    router.push('/mobileVideo1') 
 }
 
 function mobileVideo2() {
-  router.push('/') // loops back to attract
+    logClick('Mobile video 2', 'Mobile')
+    router.push('/mobileVideo2') 
 }
 
 function mobileVideo3() {
-  router.push('/') // loops back to attract
+    logClick('Mobile video 3', 'Mobile')
+    router.push('/mobileVideo3') 
 }
 
 function mobileVideo4() {
-  router.push('/') // loops back to attract
+    logClick('Mobile video 4', 'Mobile')
+    router.push('/mobileVideo4') 
 }
 </script>
 

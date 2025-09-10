@@ -1,7 +1,9 @@
 <template>
   <div class="page-content">
-    <h1>Attract video</h1>
-    <button @click="goNext">Start</button>
+    <h2>Select something!</h2>
+    <button @click="goMobile">Mobile</button>
+    <button @click="goDesktop">Desktop</button>
+
   </div>
 </template>
 
@@ -10,30 +12,37 @@ import { useRouter } from 'vue-router'
 import { logClick } from '@/utils/logger.js'
 
 const router = useRouter()
-function goNext() {
-  logClick('Start Button Clicked', 'Attract')
-  router.push('/instructions')
+
+function goMobile() {
+    logClick('Mobile Button Clicked', 'Selection')
+  router.push('/mobile') 
 }
 
+function goDesktop() {
+    logClick('Desktop Button Clicked', 'Selection')
+    router.push('/desktop') 
+}
 </script>
 
 <style scoped>
 .page-content {
-  position: relative;   /* keeps it above video */
-  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  color: white;
+  height: 100%;
   text-align: center;
+  color: white;
+  z-index: 0;
 }
 
-h1 {
+h2 {
     font-size: 200px;
-    font-family: "AvantGardeForSalesforce-Demi", sans-serif;
+}
 
+h4 {
+    font-size: 150px;
+    padding: 50px 200px;
 }
 
 button {

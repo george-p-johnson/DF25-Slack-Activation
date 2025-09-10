@@ -33,3 +33,21 @@ a,
     padding: 0 2rem;
   }
 }
+
+
+
+
+
+/*=========================================================
+
+AvantGardeForSalesforce-Demi
+
+=========================================================*/
+@font-face {
+    font-family: 'AvantGardeForSalesforce-Demi';
+    src: url('/fonts/AvantGardeForSalesforce-Demi.otf');
+    src: url('/fonts/AvantGardeForSalesforceW05-Dm.woff') format('woff'),
+         url('/fonts/AvantGardeForSalesforce-Demi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

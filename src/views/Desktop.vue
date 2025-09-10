@@ -1,30 +1,37 @@
 <template>
   <div class="page-content">
     <h2>Mobile video plays</h2>
-    <button @click="desktopVideo1">mobileVideo1</button>
-    <button @click="mobileVideo2">mobileVideo2</button>
-    <button @click="mobileVideo3">mobileVideo3</button>
-    <button @click="mobileVideo4">mobileVideo4</button>
+    <button @click="desktopVideo1">desktopVideo1</button>
+    <button @click="desktopVideo2">desktopVideo2</button>
+    <button @click="desktopVideo3">desktopVideo3</button>
+    <button @click="desktopVideo4">desktopVideo4</button>
   </div>
 </template>
 
 <script setup>
 import { useRouter } from 'vue-router'
+import { logClick } from '@/utils/logger.js'
+
 const router = useRouter()
-function mobileVideo1() {
-  router.push('/') // loops back to attract
+
+function desktopVideo1() {
+    logClick('Desktop video 1', 'Desktop')
+    router.push('/desktopVideo1') 
 }
 
-function mobileVideo2() {
-  router.push('/') // loops back to attract
+function desktopVideo2() {
+    logClick('Desktop video 2', 'Desktop')
+    router.push('/desktopVideo2') 
 }
 
-function mobileVideo3() {
-  router.push('/') // loops back to attract
+function desktopVideo3() {
+    logClick('Desktop video 3', 'Desktop')
+    router.push('/desktopVideo3') 
 }
 
-function mobileVideo4() {
-  router.push('/') // loops back to attract
+function desktopVideo4() {
+    logClick('Desktop video 4', 'Desktop')
+    router.push('/desktopVideo4') 
 }
 </script>
 
