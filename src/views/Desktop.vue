@@ -1,12 +1,17 @@
 <template>
-  <div class="page-content">
-    <h2>Mobile video plays</h2>
-    <button @click="desktopVideo1">desktopVideo1</button>
-    <button @click="desktopVideo2">desktopVideo2</button>
-    <button @click="desktopVideo3">desktopVideo3</button>
-    <button @click="desktopVideo4">desktopVideo4</button>
-  </div>
+    <div class="page-content">
+        <Transition name="fade">
+            <div v-if="true" class="fade-group">
+                <h2>Mobile video plays</h2>
+                <button @click="desktopVideo1">desktopVideo1</button>
+                <button @click="desktopVideo2">desktopVideo2</button>
+                <button @click="desktopVideo3">desktopVideo3</button>
+                <button @click="desktopVideo4">desktopVideo4</button>
+            </div>
+        </Transition>
+    </div>
 </template>
+
 
 <script setup>
 import { useRouter } from 'vue-router'
@@ -58,5 +63,16 @@ button {
     cursor: pointer;
     border-radius: 70px;
     border: none;
+}
+
+/* Transition classes */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

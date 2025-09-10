@@ -1,17 +1,21 @@
 <template>
-  <div class="page-content">
-    <h2>Desktop video3</h2>
+    <div class="page-content">
+        <Transition name="fade">
+            <div v-if="true" class="fade-group">
+                <h2>Desktop video3</h2>
 
-    <video
-      ref="videoEl"
-      autoplay
-      muted
-      playsinline
-      @ended="handleEnded"
-    >
-      <source src="/videos/mobileVideo1.mp4" type="video/mp4" />
-    </video>
-  </div>
+                <video
+                    ref="videoEl"
+                    autoplay
+                    muted
+                    playsinline
+                    @ended="handleEnded"
+                    >
+                    <source src="/videos/mobileVideo1.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </Transition>
+    </div>
 </template>
 
 <script setup>
@@ -54,5 +58,16 @@ h2 {
 .bg-video {
   max-width: 100%;
   height: auto;
+}
+
+/* Transition classes */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

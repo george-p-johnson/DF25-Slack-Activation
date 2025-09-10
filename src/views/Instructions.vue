@@ -1,12 +1,13 @@
 <template>
-  <div class="page-content">
-    <h2>Choose your own Adventure</h2>
-
-    <h4>Slack is the entry point and hub that connects every team
-
-    Pick a route and see how Slack + Agentforce power the Agentic Enterprise</h4>
-    <button @click="goNext">Next</button>
-  </div>
+    <div class="page-content">
+        <Transition name="fade">
+            <div v-if="true" class="fade-group">
+                <h2>Choose your own Adventure</h2>
+                <h4>Slack is the entry point and hub that connects every team. Pick a route and see how Slack + Agentforce power the Agentic Enterprise</h4>
+                <button @click="goNext">Next</button>
+            </div>
+        </Transition>
+    </div>
 </template>
 
 <script setup>
@@ -53,5 +54,16 @@ button {
     cursor: pointer;
     border-radius: 70px;
     border: none;
+}
+
+/* Transition classes */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

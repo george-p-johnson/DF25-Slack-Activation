@@ -1,9 +1,23 @@
+<!-- <template>
+  <div class="page-content">
+        <h1>Attract video</h1>
+        <button @click="goNext">Start</button>
+  </div>
+</template> -->
+
 <template>
   <div class="page-content">
-    <h1>Attract video</h1>
-    <button @click="goNext">Start</button>
+    <!-- Text fade -->
+    <Transition name="fade">
+      <div v-if="true" class="fade-group">
+        <h1>Attract video</h1>
+        <button @click="goNext">Start</button>
+      </div>
+    </Transition>
   </div>
 </template>
+
+
 
 <script setup>
 import { useRouter } from 'vue-router'
@@ -43,5 +57,17 @@ button {
     cursor: pointer;
     border-radius: 70px;
     border: none;
+}
+
+
+/* Transition classes */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

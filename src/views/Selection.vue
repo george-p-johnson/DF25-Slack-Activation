@@ -1,11 +1,17 @@
 <template>
   <div class="page-content">
-    <h2>Select something!</h2>
-    <button @click="goMobile">Mobile</button>
-    <button @click="goDesktop">Desktop</button>
+    <Transition name="fade">
+        <div v-if="true" class="fade-group">
+            <h2>Select something!</h2>
+            <button @click="goMobile">Mobile</button>
+            <button @click="goDesktop">Desktop</button>
+        </div>
+    </Transition>
+
 
   </div>
 </template>
+
 
 <script setup>
 import { useRouter } from 'vue-router'
@@ -52,5 +58,16 @@ button {
     cursor: pointer;
     border-radius: 70px;
     border: none;
+}
+
+/* Transition classes */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
