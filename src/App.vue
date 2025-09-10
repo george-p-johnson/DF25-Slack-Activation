@@ -42,6 +42,8 @@
 <script setup>
 import { ref, watch, onMounted, onBeforeUnmount } from "vue"
 import { useRoute, useRouter } from "vue-router"
+import { endSession } from "@/utils/logger.js"   
+
 
 const route = useRoute()
 const router = useRouter()
@@ -90,8 +92,9 @@ function continueSession() {
 }
 
 function restart() {
-  closeModal()
-  router.push("/")
+    endSession() 
+    closeModal()
+    router.push("/")
 }
 
 function activityListener() {

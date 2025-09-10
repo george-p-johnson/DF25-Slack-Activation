@@ -1,10 +1,3 @@
-<!-- <template>
-  <div class="page-content">
-        <h1>Attract video</h1>
-        <button @click="goNext">Start</button>
-  </div>
-</template> -->
-
 <template>
   <div class="page-content">
     <!-- Text fade -->
@@ -21,12 +14,16 @@
 
 <script setup>
 import { useRouter } from 'vue-router'
-import { logClick } from '@/utils/logger.js'
+// import { logClick } from '@/utils/logger.js'
+import { startSession, logClick, endSession } from '@/utils/logger.js'
+
 
 const router = useRouter()
 function goNext() {
-  logClick('Start Button Clicked', 'Attract')
-  router.push('/instructions')
+    startSession()
+
+    logClick('Start Button Clicked', 'Attract')
+    router.push('/instructions')
 }
 
 </script>

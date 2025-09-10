@@ -21,12 +21,15 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
+import { logClick, endSession } from '@/utils/logger.js'  // ✅ add endSession here
+
 
 const router = useRouter()
 const videoEl = ref(null)
 
 const handleEnded = () => {
-  router.push('/') // go back to root after video ends
+    endSession()
+    router.push('/') // go back to root after video ends
 }
 
 onMounted(() => {

@@ -17,7 +17,7 @@ import { logClick } from '@/utils/logger.js'
 const router = useRouter()
 
 function goNext() {
-  logClick('Next Button Clicked', 'Instructions')
+  logClick('Instructions Button Clicked', 'Instructions')
   router.push('/selection')
 }
 
